@@ -2,11 +2,12 @@ import json
 import requests
 import time
 import urllib
+from dbhelper import DBHelper
 
 TOKEN = "430034156:AAFw4qnhX68xKUwkOUbpm0eu-IYt1JKvwjU"
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
 TIMEOUT = 100
-
+db = DBHelper()
 
 def get_url(url):
     response = requests.get(url)
